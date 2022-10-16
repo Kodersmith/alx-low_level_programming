@@ -1,22 +1,23 @@
 #include <stdio.h>
 
 /**
- *main-prints numbers between 0 to 9 with commas and spaces
+ *main-prints hexadecimal base 0123456789abcdef, using putchar
  *
  *Return: always 0 (success)
  */
 int main(void)
 {
-	int i;
+	int n = '0';
 
-	for (i = 48; i < 58; i++)
+	int a_to_f = 'a';
+
+	while (n <= '9')/*print 0-9/
 {
-	putchar(i);
-	if (i != 57)
-{
-	putchar(',');
-	putchar(' ');
+	putchar(n);
+	n++;
 }
+
+	while (a_to_f <= 'f') / *print a-f to finish hexbase* /
 }
 	putchar('\n');
 	return (0);
