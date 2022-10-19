@@ -6,7 +6,7 @@
  *Return: returns the abs value
  *
  */
-int _abs(int a)
+int _abs(int)
 {
 int k = a
 int absvalue;
