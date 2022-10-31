@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 
 	for (; *haystack; haystack++)
 {
-	for (point = 0; needle[point], point++;)
+	for (point = 0; needle[point], point++)
 {
 	if (!(*(haystack + point)))
 {
