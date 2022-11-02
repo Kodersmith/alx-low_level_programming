@@ -1,40 +1,38 @@
 #include "main.h"
 
 /**
- *_increasevar-increases i to find sqrt
- *@i: start at 1
- *@n: the number
- *Return: i, i + 1, or -1
+ *power_operation-returns the natural square root of a number
+ *@n: input number
+ *@c: iterator
+ *Return: square root or -1
  */
 
-int _increasevar(int i, int n)
+int power_operation(int n, int c)
 {
-	if (i * i == n)
-		return (i);
-	if (i * i < n)
-		return (_increasevar(i + 1, n));
-	if (i * i > n)
+	if (c % (n / c) == 0)
+{
+	if (c * (n / c) == n)
+		return (c);
+	else
 		return (-1);
-	return (i);
+}
+	return (0 + power_operation(n, c + 1));
 }
 /**
- *_sqrt_recursion-finds sqrt
- *@n: the number
- *Return: -1, 0, or sqrt
+ *_sqrt_recursion-returns the natural square root of a number
+ *@n: input number
+ *Return: natural square root
  */
 
-int _sqrt_recursion(int n);
-({
+int _sqrt_recursion(int n)
+
+{
 	if (n < 0)
 		return (-1);
 	if (n == 0)
 		return (0);
 	if (n == 1)
 		return (1);
-	else if (n > 1)
-	{
-		return (_increasevar(1, n));
-	}
-	return (-1);
-)}
+	return (power_operation(n, 2));
+}
 
