@@ -22,7 +22,7 @@ int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
 	printf("Error\n");
 	return (1);
 }
-	total = atoi(argv[1]); /*covert str to int*/
+	total = atoi(argv[1]); /*covert str int*/
 	if (total <= 0)
 {
 	printf("0\n");
