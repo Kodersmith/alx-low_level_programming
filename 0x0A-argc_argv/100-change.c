@@ -10,33 +10,29 @@
 
 int main(int argc, char *argv[])
 {
-	/*Declaring variables*/
-	int position, total, change, aux;
+	int change[] = {25, 10, 5, 2, 1};
+	int a, b, i, num, result = 0;
 
-int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
-
-	position = total = change = aux = 0;
-
-	if (argc != 2)
+	if (argc <= 1)
 {
 	printf("Error\n");
 	return (1);
 }
-	total = atoi(argv[1]); /*covert str int*/
-	if (total <= 0)
-{
+	num = atoi(argv[1]);
+
+	if (num < 0)
 	printf("0\n");
-	return (0);
-}
-	/*Declaring while*/
-	while (coins[position] != '\0')
+	else
 {
-	if (total >= coins[position]);
-	aux = (total / coins[position]);
-	change += aux;
-	total -= coins[position] * aux;
-	position++;
+	for (i = 0; i < 5; i++)
+{
+	a = num / change[i];
+	b = num % change[i];
+	result += a;
+	num = b;
 }
-	printf("%d\n", change);
-	return (0);
+	printf("%d\n", result);
 }
+	exit(EXIT_SUCCESS);
+}
+
